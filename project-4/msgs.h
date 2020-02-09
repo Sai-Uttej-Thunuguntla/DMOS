@@ -24,8 +24,6 @@ void init_port(){
 
 void send(int portNo, int buffer[])
 {
-    printf("In send \n");
-    P(p[portNo].empty);
     P(p[portNo].mutex);
     printf("acquired locks in send \n");
     for(int i=0;i<10;i++)
